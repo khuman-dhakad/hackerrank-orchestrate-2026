@@ -49,3 +49,12 @@ for index, row in claims_df.iterrows():
     print(decision)
 
 print("\nTotal Results:", len(all_results))
+
+output_df = pd.DataFrame(all_results)
+
+output_df.to_csv(
+    "output.csv",
+    index=False
+)
+
+print("output.csv generated")
