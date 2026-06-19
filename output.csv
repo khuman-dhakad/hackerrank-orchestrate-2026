@@ -1,0 +1,21 @@
+evidence_standard_met,evidence_standard_met_reason,risk_flags,issue_type,object_part,claim_status,claim_status_justification,severity
+True,Visible evidence available,none,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,none,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,none,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,none,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,user_history_risk,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,none,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,none,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,user_history_risk,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,none,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,none,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,none,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,none,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,none,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,user_history_risk,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,none,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,none,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,user_history_risk,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,manual_review_required,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,user_history_risk,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown
+True,Visible evidence available,user_history_risk,unknown,unknown,not_enough_information,Fallback mode used because Gemini was unavailable.,unknown

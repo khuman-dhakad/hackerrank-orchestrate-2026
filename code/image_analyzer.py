@@ -9,6 +9,7 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 model = genai.GenerativeModel("gemini-2.5-flash")
+USE_GEMINI = True
 
 
 def analyze_image(image_path, claim_text, claim_object):
@@ -124,8 +125,22 @@ contradicted
 not_enough_information
 """
 
-    response = model.generate_content(
-        [prompt, image]
-    )
+    try:
+        if USE_GEMINI:
+            response = model.generate_content(
+                [prompt, image]
+            )
+            return response.text
+    except Exception as e:
+        print("Gemini Error:", e)
+        print("Using fallback mode...")
 
-    return response.text
+    fallback = {
+        "issue_type": "unknown",
+        "object_part": "unknown",
+        "claim_status": "not_enough_information",
+        "severity": "unknown",
+        "reason": "Fallback mode used because Gemini was unavailable."
+    }
+
+    return json.dumps(fallback)
