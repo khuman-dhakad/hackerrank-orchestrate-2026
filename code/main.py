@@ -19,6 +19,7 @@ result = analyze_image(
     row["user_claim"],
     row["claim_object"]
 )
+print(result)
 
 data = json.loads(
     result.replace("```json", "")
