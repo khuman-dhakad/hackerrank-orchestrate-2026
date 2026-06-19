@@ -8,36 +8,44 @@ from claim_parser import extract_claim
 from decision_engine import build_decision
 
 claims_df = load_sample_claims()
-
-row = claims_df.iloc[1]
-
-images = row["image_paths"].split(";")
-
-print(images)
-result = analyze_image(
-    "dataset/" + images[1],
-    row["user_claim"],
-    row["claim_object"]
-)
-print(result)
-
-data = json.loads(
-    result.replace("```json", "")
-          .replace("```", "")
-          .strip()
-)
-
 history_df = pd.read_csv("dataset/user_history.csv")
 
-history_row = history_df[
-    history_df["user_id"] == row["user_id"]
-].iloc[0]
+all_results = []
 
-risk_flags = get_risk_flags(history_row)
-claimed_issue = extract_claim(row["user_claim"])
-decision = build_decision(
-    data,
-    risk_flags,
-    claimed_issue
-)
-print(decision)
+for index, row in claims_df.iterrows():
+
+    print(f"\nProcessing Claim {index + 1}")
+
+    images = row["image_paths"].split(";")
+
+    result = analyze_image(
+        "dataset/" + images[0],
+        row["user_claim"],
+        row["claim_object"]
+    )
+
+    data = json.loads(
+        result.replace("```json", "")
+              .replace("```", "")
+              .strip()
+    )
+
+    history_row = history_df[
+        history_df["user_id"] == row["user_id"]
+    ].iloc[0]
+
+    risk_flags = get_risk_flags(history_row)
+
+    claimed_issue = extract_claim(row["user_claim"])
+
+    decision = build_decision(
+        data,
+        risk_flags,
+        claimed_issue
+    )
+
+    all_results.append(decision)
+
+    print(decision)
+
+print("\nTotal Results:", len(all_results))
