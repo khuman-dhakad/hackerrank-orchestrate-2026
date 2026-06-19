@@ -39,6 +39,7 @@ for index, row in claims_df.iterrows():
     claimed_issue = extract_claim(row["user_claim"])
 
     decision = build_decision(
+        row,
         data,
         risk_flags,
         claimed_issue
