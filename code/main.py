@@ -15,7 +15,7 @@ history_df = pd.read_csv("dataset/user_history.csv")
 
 all_results = []
 
-for index, row in claims_df.iloc[36:44].iterrows():
+for index, row in claims_df.iterrows():
     print(f"\nProcessing Claim {index + 1}")
 
     images = row["image_paths"].split(";")
@@ -96,8 +96,8 @@ output_df = pd.DataFrame(
 )
 
 output_df.to_csv(
-    "output_37_44.csv",
+    "output.csv",
     index=False
 )
 
-print("output_37_44.csv generated")
+print("output.csv generated")
