@@ -99,5 +99,4 @@ output_df.to_csv(
     "output.csv",
     index=False
 )
-
 print("output.csv generated")
